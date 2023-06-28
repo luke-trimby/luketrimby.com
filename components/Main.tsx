@@ -86,8 +86,12 @@ export default function Main() {
             €1m Book (Epic Industries / G Games)
           </h3>
           <p className="pt-2 value-text text-md text-gray-200 fkrr1">
-            This slot is so named because you can win $ 1,000,000 in one spin!
-            This can be done on 5 reels with 10 pay lines.
+            All the action takes place in a rich-looking mansion in one of
+            the halls of which there is a playing field with 5 reels and 3
+            rows. You can place bets from €0.10 to €20 per spin. Bonus
+            features include Scatter which triggers 10 free spins, Wild
+            which replaces regular symbols, Expanding symbol which gives
+            more wins during free spins, and Jackpot!
           </p>
         </div>
 
@@ -102,9 +106,11 @@ export default function Main() {
             Elite of Evil (Epic Industries / G Games)
           </h3>
           <p className="pt-2 value-text text-md text-gray-200 fkrr1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            tincidunt a libero in finibus. Maecenas a nisl vitae ante rutrum
-            porttitor.
+            Taking place in a fantasy world with video-game inspired gameplay,
+            this G Gaming cascading slot is packed with exciting bonus features
+            including treasure chests that you can collect for extra prizes,
+            exploding symbols, free spins, and boss fights that transport you
+            to new realms to battle a variety of villains!
           </p>
         </div>
       </div>
