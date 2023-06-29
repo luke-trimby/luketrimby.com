@@ -1,10 +1,10 @@
 export const CasualManSvg = () => {
   return (
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-      width="320pt" height="320pt" viewBox="450 0 1280 1280"
+      width="150pt" height="150pt" viewBox="450 0 1280 1280"
       preserveAspectRatio="xMidYMid meet">
       <g transform="translate(0,1280) scale(0.1,-0.1)"
-        fill="#000000" stroke="none">
+        fill="#111111" stroke="none">
         <path d="M6240 12187 c-130 -41 -227 -87 -261 -124 -15 -15 -63 -106 -108
 -202 l-81 -174 10 -95 c6 -53 20 -135 31 -184 17 -74 19 -97 10 -133 -14 -57
 -14 -210 0 -238 7 -12 33 -49 59 -82 46 -58 47 -63 59 -163 11 -94 16 -110 57
