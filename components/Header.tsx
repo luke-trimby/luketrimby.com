@@ -1,4 +1,5 @@
 import React from "react";
+import { RightArrowSvg } from './svg/right-arrow';
 
 export default function Header() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -58,15 +59,9 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                <a className="inline-flex items-center px-4 py-2 mt-2 font-medium text-white transition duration-500 ease-in-out transform rounded-lg text-md md:mt-0 md:ml-4 bg-black" href="/api/cv" >
+                <a href="/api/cv" className="inline-flex items-center px-4 py-2 my-2 font-medium text-white transition duration-500 ease-in-out transform rounded-lg text-md md:mt-0 md:ml-4 bg-black" >
                   <span className="justify-center">Download CV</span>
-                  <svg
-                    className="w-3 h-3 fill-current text-white flex ml-2 -mr-1"
-                    viewBox="0 0 12 12"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fillRule="nonzero" />
-                  </svg>
+                  <RightArrowSvg />
                 </a>
               </li>
             </ul>
