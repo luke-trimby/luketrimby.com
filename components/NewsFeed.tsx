@@ -19,6 +19,7 @@ interface NewsFeedItem {
 
 const NEWS_ITEM_UPDATE_INTERVAL: number = 5000;
 const NEWS_FEED_UPDATE_INTERVAL: number = 60000;
+const NEWS_FEED_LENGTH: number = 10;
 
 const NewsFeed = ({ navbarIsOpen }: NewFeedProps) => {
   const [currentFeedItems, setCurrentFeedItems] = React.useState<NewsFeedItem[]>([]);
@@ -42,7 +43,7 @@ const NewsFeed = ({ navbarIsOpen }: NewFeedProps) => {
   useEffect(() => {
     const getLatestFromFeed = () => fetch('api/feed')
       .then(response => response.json())
-      .then((data) => setCurrentFeedItems(data.items.slice(0, 5)));
+      .then((data) => setCurrentFeedItems(data.items.slice(0, NEWS_FEED_LENGTH)));
 
     getLatestFromFeed();
     const interval: NodeJS.Timer = setInterval(getLatestFromFeed, NEWS_FEED_UPDATE_INTERVAL);
