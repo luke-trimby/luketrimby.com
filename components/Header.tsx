@@ -1,8 +1,12 @@
 import React from "react";
 import { RightArrowSvg } from './svg/right-arrow';
 
-export default function Header() {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+interface HeaderProps {
+  navbarOpen: boolean;
+  setNavbarOpen: (open: boolean) => void;
+}
+
+export default function Header({ navbarOpen, setNavbarOpen }: HeaderProps) {
 
   return (
     <div className="fixed top-0 w-full z-30 clearNav md:bg-opacity-90 transition duration-300 ease-in-out">
