@@ -18,7 +18,6 @@ export default function Contact() {
         <title>nine4</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <div className="flex flex-col justify-center mx-auto mt-52 text-center max-w-2x1">
         <h1 className="text-3xl font-bold tracking-tight text-black md:text-5xl">
           404 – Unavailable

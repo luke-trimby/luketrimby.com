@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer id="ContactMe" className="py-20">
       <div className="max-w-6xl mx-auto divide-y divide-gray-200 px-4 sm:px-6 md:px-8">
-        <ul className="text-sm font-medium  sm:pb-20 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10">
+        <ul className="text-sm font-medium sm:pb-20 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10">
 
           <li className="space-y-5 row-span-2 pb-5">
             <h2 className="text-sm tracking-wide text-gray-200 uppercase font-bold">
