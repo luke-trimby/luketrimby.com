@@ -21,34 +21,29 @@ const NEWS_ITEM_UPDATE_INTERVAL: number = 5000;
 const NEWS_FEED_UPDATE_INTERVAL: number = 60000;
 
 const NewsFeed = ({ navbarIsOpen }: NewFeedProps) => {
-  const [currentFeedItems, setCurrentFeedItems] = React.useState<NewsFeedItem[]>(null);
+  const [currentFeedItems, setCurrentFeedItems] = React.useState<NewsFeedItem[]>([]);
   const [currentNewsItem, setCurrentNewsItem] = React.useState<NewsFeedItem>(null);
   const top: string = navbarIsOpen ? "top-32" : "top-16";
   let newsItemIndex: number = 0;
 
-  const updateNewsItem = () => {
-    if (currentFeedItems) {
+  useEffect(() => {
+    const updateNewsItem = () => {
       newsItemIndex++;
       newsItemIndex = (newsItemIndex + currentFeedItems.length) % currentFeedItems.length;
       const newsItem: NewsFeedItem = currentFeedItems?.at(newsItemIndex) || null;
       setCurrentNewsItem(newsItem);
-    }
-  };
+    };
 
-  useEffect(() => {
     updateNewsItem();
     const interval: NodeJS.Timer = setInterval(updateNewsItem, NEWS_ITEM_UPDATE_INTERVAL);
     return () => clearInterval(interval);
-  }, []);
-
-  const getLatestFromFeed = () => fetch('api/feed')
-    .then(response => response.json())
-    .then((data) => {
-      const feedItems: NewsFeedItem[] = data.items.slice(0, 5);
-      setCurrentFeedItems(feedItems);
-    });
+  }, [currentFeedItems]);
 
   useEffect(() => {
+    const getLatestFromFeed = () => fetch('api/feed')
+      .then(response => response.json())
+      .then((data) => setCurrentFeedItems(data.items.slice(0, 5)));
+
     getLatestFromFeed();
     const interval: NodeJS.Timer = setInterval(getLatestFromFeed, NEWS_FEED_UPDATE_INTERVAL);
     return () => clearInterval(interval);
