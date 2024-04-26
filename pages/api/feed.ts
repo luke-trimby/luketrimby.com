@@ -1,12 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { parse as rss2Json } from 'rss-to-json';
+import parse from 'rss-to-json';
 
-
-const topicTech = 'CAAqJggKIiBDQkFTRWdvSUwyMHZNRGRqTVhZU0FtVnVHZ0pWVXlnQVAB';
-const techNewsRss = `https://news.google.com/rss/topics/${topicTech}?hl=en-GB&gl=GB&ceid=GB:en`;
+const feedUrl = 'https://news.google.com/rss?hl=en-GB&gl=GB&ceid=GB:en';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-  const rss = await rss2Json(techNewsRss);
+  const rss = await parse(feedUrl);
   const json = JSON.stringify(rss, null, 3);
   res.setHeader('Content-Type', 'application/json');
   return res.status(200).send(json);

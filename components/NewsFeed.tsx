@@ -24,7 +24,7 @@ const NEWS_FEED_LENGTH: number = 10;
 const NewsFeed = ({ navbarIsOpen }: NewFeedProps) => {
   const [currentFeedItems, setCurrentFeedItems] = React.useState<NewsFeedItem[]>([]);
   const [currentNewsItem, setCurrentNewsItem] = React.useState<NewsFeedItem>(null);
-  const top: string = navbarIsOpen ? "top-40" : "top-24";
+  const top: string = navbarIsOpen ? "top-32" : "top-16";
   let newsItemIndex: number = 0;
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const NewsFeed = ({ navbarIsOpen }: NewFeedProps) => {
     };
 
     updateNewsItem();
-    const interval: NodeJS.Timeout = setInterval(updateNewsItem, NEWS_ITEM_UPDATE_INTERVAL);
+    const interval: NodeJS.Timer = setInterval(updateNewsItem, NEWS_ITEM_UPDATE_INTERVAL);
     return () => clearInterval(interval);
   }, [currentFeedItems]);
 
@@ -46,14 +46,14 @@ const NewsFeed = ({ navbarIsOpen }: NewFeedProps) => {
       .then((data) => setCurrentFeedItems(data.items.slice(0, NEWS_FEED_LENGTH)));
 
     getLatestFromFeed();
-    const interval: NodeJS.Timeout = setInterval(getLatestFromFeed, NEWS_FEED_UPDATE_INTERVAL);
+    const interval: NodeJS.Timer = setInterval(getLatestFromFeed, NEWS_FEED_UPDATE_INTERVAL);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <>
       {currentNewsItem &&
-        <div className={`fixed w-full ${top} md:top-24 z-30 w-full bg-gray-800 text-white p-2 text-sm text-center`}>
+        <div className={`fixed w-full ${top} md:top-16 z-30 w-full bg-gray-800 text-white p-2 text-sm text-center`}>
           <span className="w-fit mr-4 inline-block align-middle"><a href={currentNewsItem.link} target="_blank">{currentNewsItem.title}</a></span>
         </div>
       }

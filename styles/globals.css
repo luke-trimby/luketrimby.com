@@ -27,6 +27,7 @@ a {
 @font-face {
   font-family: "AvenirNextW10-Bold";
   src: url("../public/fonts/AvenirNext.ttf");
+
 }
 
 .Avenir {
@@ -36,7 +37,8 @@ a {
 
 .clearNav {
   backdrop-filter: saturate(180%) blur(5px) !important;
-  background-color: rgba(255, 255, 255, 1) !important;
+  /* background-color: rgba(255, 255, 255, 0.6) !important; */
+  background-color: #FFAA33 !important;
 }
 
 .grr {
@@ -45,7 +47,7 @@ a {
 
 .greyC {
   filter: gray;
-  -webkit-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%); 
   transition: 0.4s;
 }
 
@@ -53,4 +55,16 @@ a {
   filter: none;
   -webkit-filter: none;
   transition: 0.4s;
+}
+
+.fsac4 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 32px;
+}
+
+@media (min-width: 720px) {
+  .fsac4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
