@@ -11,18 +11,18 @@ export default function Home() {
   const [navbarOpen, setNavbarOpen] = React.useState<boolean>(false);
 
   return (
-    <div className="text-black bg-black">
+    <div className="">
       <NextSeo
-        title="Home: Luke Trimby - Digital Portfolio"
-        description="Luke Trimby's online digital portfolio"
-        canonical="https://luketrimby.com/"
+        title="Home: Lukas Tech"
+        description="Lukas Tech Ltd - digital tech solutions"
+        canonical="https://lukas-tech.com"
         openGraph={{
-          url: "https://luketrimby.com/",
+          url: "https://lukas-tech.com",
         }}
       />
       <Head>
-        <title>Luke Trimby - Digital Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Digital Tech Solutions - Lukas Tech Ltd</title>
+        <link rel="icon" href="/img/favicon.png" />
       </Head>
       <Header navbarOpen={navbarOpen} setNavbarOpen={() => setNavbarOpen(!navbarOpen)} />
       <Main />
