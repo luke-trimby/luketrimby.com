@@ -1,5 +1,8 @@
+import Image from 'next/image';
+
 import { CasualManSvg } from './svg/casual-man';
 import { SuitedManSvg } from './svg/suited-man';
+import AIHeadshot from './img/ai-headshot-001.png';
 
 import styles from './Main.module.css';
 
@@ -25,7 +28,7 @@ export default function Main() {
 
         </div>
         <div className="flex items-center">
-          <img className="w-80 rounded-full" src="/images/avatar.jpg" alt="Bordered avatar" />
+          <Image className="w-80 rounded-full" src={AIHeadshot} alt="AI Headshot" />
         </div>
       </div>
 
