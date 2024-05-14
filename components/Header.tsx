@@ -63,7 +63,7 @@ export default function Header({ navbarOpen, setNavbarOpen }: HeaderProps) {
                 </a>
               </li>
               <li>
-                <a href="/api/cv" className="inline-flex items-center px-4 py-2 my-2 font-medium text-white transition duration-500 ease-in-out transform rounded-lg text-md md:mt-0 md:ml-4 bg-black" >
+                <a href="https://drive.google.com/file/d/1mMeHLsECh9mKuwz0P8opzFJqXcMEnmgA/view?usp=sharing" target="_blank" className="inline-flex items-center px-4 py-2 my-2 font-medium text-white transition duration-500 ease-in-out transform rounded-lg text-md md:mt-0 md:ml-4 bg-black" >
                   <span className="justify-center">Download CV</span>
                   <RightArrowSvg />
                 </a>
